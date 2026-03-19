@@ -1,10 +1,11 @@
 import Header from "./Header";
+import TaskList from "./TaskList";
 
 function App() {
   return (
     <>
       <Header />
-      //list group component that loads: //individual task components
+      <TaskList />
     </>
   );
 }
