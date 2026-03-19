@@ -1,10 +1,17 @@
 import TaskItem from "./TaskItem";
 
-function TaskList() {
+interface TaskListProps {
+  taskList: string[];
+}
+
+function TaskList({ taskList }: TaskListProps) {
   return (
     <>
-      <TaskItem taskName="Do the dishes" />
-      <TaskItem taskName="Bake cookies" />
+      <ul>
+        {taskList.map((item, index) => (
+          <TaskItem taskName={item} key={index} />
+        ))}
+      </ul>
     </>
   );
 }

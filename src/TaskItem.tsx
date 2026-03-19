@@ -5,7 +5,7 @@ interface TaskItemProps {
 function TaskItem({ taskName }: TaskItemProps) {
   return (
     <>
-      <h4>{taskName}</h4>
+      <li>{taskName}</li>
     </>
   );
 }
