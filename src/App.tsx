@@ -6,12 +6,16 @@ import TaskList from "./TaskList";
 const toDoList = ["eat pie", "run a mile", "buy eggs"];
 
 function App() {
-  const [list, setList] = useState(toDoList);
+  const [list, setList] = useState<string[]>(toDoList);
+
+  const addTask = (newTask: string) => {
+    setList([...list, newTask]);
+  };
 
   return (
     <>
       <Header />
-      <TaskInput />
+      <TaskInput onAddTask={addTask} />
       <TaskList taskList={list} />
     </>
   );

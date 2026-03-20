@@ -1,9 +1,27 @@
 import { useState } from "react";
 
-// const [task, setTask] = useState("");
+interface TaskInputProps {
+  onAddTask: (task: string) => void;
+}
 
-function TaskInput() {
-  return <label>{/* Add a task: <input type="text" value={task} /> */}</label>;
+function TaskInput({ onAddTask }: TaskInputProps) {
+  const [task, setTask] = useState("");
+  const handleSubmit = () => {
+    onAddTask(task);
+    setTask("");
+  };
+
+  return (
+    <label>
+      Add a task:
+      <input
+        type="text"
+        value={task}
+        onChange={(e) => setTask(e.target.value)}
+      />
+      <button onClick={handleSubmit}>Submit</button>
+    </label>
+  );
 }
 
 export default TaskInput;
