@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+body {
+    background-color: aliceblue;
+    font-family: "Sora", sans-serif;
+}
+
+#root {
+    width: 500px;
+    height: 300px;
+
+    margin: auto;
+
+
+    border: 2px solid black;
+    border-radius: 15px;
+
+    box-shadow: 6px 6px black;
+}
+
+#root h1 {
+    height: 10%;
+    margin: 0;
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+
+    font-size: 18px;
+    padding-left: 3%;
+    padding-top: 3px;
+}
+
+.taskArea {
+    height: 90%;
+    box-sizing: border-box;
+    background-color: rgb(195, 231, 231);
+
+    border-radius: 0 0 13px 13px;
+    padding: 20px;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 3px;
+    font-family: "Sora", sans-serif;
+}
+
+button {
+    border: 2px solid black;
+    border-radius: 3px;
+    font-family: "Sora", sans-serif;
+}
+
+
+
+#root ul {
+    width:32%;
+    height: 50%;
+
+    list-style: none;
+
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    padding: 20px;
+}
