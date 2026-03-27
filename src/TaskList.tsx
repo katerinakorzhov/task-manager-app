@@ -1,15 +1,23 @@
 import TaskItem from "./TaskItem";
+import type { Task } from "./App";
 
 interface TaskListProps {
-  taskList: string[];
+  taskList: Task[];
+  onToggleTask: (id: number) => void;
+  onDeleteTask: (id: number) => void;
 }
 
-function TaskList({ taskList }: TaskListProps) {
+function TaskList({ taskList, onToggleTask, onDeleteTask }: TaskListProps) {
   return (
     <>
       <ul>
-        {taskList.map((item, index) => (
-          <TaskItem taskName={item} key={index} />
+        {taskList.map((item) => (
+          <TaskItem
+            key={item.id}
+            taskObject={item}
+            onToggle={onToggleTask}
+            onDelete={onDeleteTask}
+          />
         ))}
       </ul>
     </>
