@@ -110,3 +110,21 @@ button {
     border-radius: 50%;
     background-color: black;
 }
+
+.menu {
+    display: none;
+    flex-direction: row;
+    z-index: 1;
+}
+
+.menu button {
+    font-size: 10px;
+    height: 18px;
+    background-color: rgb(212, 240, 240);
+    padding: 0 5px 0 5px;
+    margin-left: 2px;
+}
+
+.visible {
+    display: flex;
+}
