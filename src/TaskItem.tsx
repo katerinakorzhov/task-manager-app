@@ -16,13 +16,17 @@ function TaskItem({ taskObject, onToggle, onDelete }: TaskItemProps) {
       <div className="buttons">
         <input
           type="checkbox"
-          defaultChecked={taskObject.completed}
+          checked={taskObject.completed}
           onChange={() => {
-            () => {
-              onToggle(taskObject.id);
-            };
+            onToggle(taskObject.id);
           }}
         />
+
+        <div className={`menu ${menuVisible ? "visible" : ""}`}>
+          <button>Edit</button>
+          <button onClick={() => onDelete(taskObject.id)}>Delete</button>
+        </div>
+
         <button
           className="kebabMenu"
           onClick={() => {
@@ -33,11 +37,6 @@ function TaskItem({ taskObject, onToggle, onDelete }: TaskItemProps) {
           <span className="dot"></span>
           <span className="dot"></span>
         </button>
-
-        <div className={`menu ${menuVisible ? "visible" : ""}`}>
-          <button>Edit</button>
-          <button onClick={() => onDelete(taskObject.id)}>Delete</button>
-        </div>
       </div>
     </div>
   );

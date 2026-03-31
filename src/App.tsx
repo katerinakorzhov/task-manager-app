@@ -34,7 +34,7 @@ function App() {
       taskDescription: newTaskDescription,
       completed: false,
     };
-    setList([...list, newTask]);
+    setList((prevList) => [...prevList, newTask]);
   };
 
   const deleteTask = (id: number) => {
